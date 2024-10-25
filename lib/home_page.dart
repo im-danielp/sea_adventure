@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sea_adventure/area_aprendizagem/area_aprendizagem.dart';
+import 'package:sea_adventure/area_aprendizagem/animais_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).push(
                   MaterialPageRoute(
-                    builder: (context) => const Aprendizagem(),
+                    builder: (context) => const AnimaisPage(),
                   ),
                 );
               },

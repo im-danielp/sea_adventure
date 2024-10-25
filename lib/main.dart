@@ -22,7 +22,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle.light.copyWith(
-        statusBarColor: Theme.of(context).primaryColor,
+        statusBarColor: Colors.blue,
+        // statusBarIconBrightness: Brightness.dark,
       ),
       child: SafeArea(
         child: MaterialApp(

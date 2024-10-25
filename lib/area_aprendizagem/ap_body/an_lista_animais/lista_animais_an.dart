@@ -1,29 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:sea_adventure/area_aprendizagem/body/aa_detalhes/detalhes_animal_aa.dart';
-import 'package:sea_adventure/area_aprendizagem/body/aa_lista_animais/class_animais_aa.dart';
+import 'package:sea_adventure/area_aprendizagem/ap_body/an_detalhes/detalhes_animal_an.dart';
+import 'package:sea_adventure/area_aprendizagem/ap_body/an_lista_animais/class_animal_an.dart';
+import 'package:sea_adventure/area_aprendizagem/ap_body/an_pesquisa/class_notifier.dart';
+import 'package:sea_adventure/utilities/funcoes.dart';
 
 class ListaAnimais extends StatelessWidget {
-  const ListaAnimais({super.key});
+  final NotifierAnimais notifierAnimais;
+
+  const ListaAnimais({
+    super.key,
+    required this.notifierAnimais,
+  });
 
   @override
   Widget build(BuildContext context) {
-    List<Animal> listaAnimais = Animal.animais;
+    // Se a lista de pesquisa for vazia, traz todos os cadastros, caso contrário traz os pesquisados.
+    List<Animal> listaAnimais = notifierAnimais.listaPesquisados.isEmpty
+        ? Animal.animais
+        : notifierAnimais.listaPesquisados;
 
     return Expanded(
       child: ListView.builder(
         itemCount: listaAnimais.length,
         itemBuilder: (context, index) {
+          // Representa os animaais da lista.
           Animal animal = listaAnimais[index];
 
           return GestureDetector(
-            onTap: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) => DetalhesAnimal(animal: animal),
-                ),
-              );
-            },
             child: Card(
               color: Colors.white,
               child: Padding(
@@ -42,18 +46,25 @@ class ListaAnimais extends StatelessWidget {
                       child: Column(
                         children: [
                           Text(
-                            animal.nome,
+                            animal.nome.toTitleCase,
                             style: const TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
+                          const Gap(7),
                           Text(animal.resumo),
                         ],
                       ),
                     ),
                   ],
                 ),
+              ),
+            ),
+            // Vai para a tela de detalhes do animal quando clicado no card.
+            onTap: () => Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => DetalhesAnimal(animal: animal),
               ),
             ),
           );

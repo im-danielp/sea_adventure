@@ -6,10 +6,8 @@ final class Animal {
   final String resumo;
   final String imagem;
   final RichText detalhes;
-  final BuildContext? context;
 
   const Animal({
-    this.context,
     required this.nome,
     required this.resumo,
     required this.imagem,
@@ -19,7 +17,7 @@ final class Animal {
   static List<Animal> animais = [
     // Orca
     Animal(
-      nome: 'Orca',
+      nome: 'ORCA',
       resumo:
           'São encontradas em todos os oceanos do mundo, desde águas frias como as da Antártida até regiões tropicais.',
       imagem: 'lib/images/orca.png',
@@ -65,7 +63,7 @@ final class Animal {
 
     // Agua-Viva
     Animal(
-        nome: 'Água-viva',
+        nome: 'ÁGUA-VIVA',
         resumo:
             'As águas-vivas são criaturas marinhas fascinantes, com corpos quase totalmente transparentes e gelatinosos.',
         imagem: 'lib/images/aguaViva.png',
