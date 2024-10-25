@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:sea_adventure/area_aprendizagem/ap_body/an_pesquisa/class_notifier.dart';
+import 'package:sea_adventure/animais_page/an_controller/class_notifier.dart';
 
+/// Título da página e pesquisa. O título é ocultado quando o usuárioo inicia uma pesquisa.
+/// Uso: body_an.dart.
 class HeaderAnimal extends StatefulWidget {
   final NotifierAnimais notifierAnimais;
 
@@ -12,12 +14,11 @@ class HeaderAnimal extends StatefulWidget {
 }
 
 class _HeaderAnimalState extends State<HeaderAnimal> {
+  // Controller TextField.
   final TextEditingController pesquisaController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
-    // Controller TextField.
-
     return Padding(
       padding: const EdgeInsets.only(top: 15, bottom: 10, right: 8),
       child: Row(

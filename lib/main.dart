@@ -10,24 +10,17 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  ThemeData _buildTheme(brightness) {
-    var baseTheme = ThemeData(brightness: brightness);
-
-    return baseTheme.copyWith(
-      textTheme: GoogleFonts.poppinsTextTheme(baseTheme.textTheme),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: SystemUiOverlayStyle.light.copyWith(
         statusBarColor: Colors.blue,
-        // statusBarIconBrightness: Brightness.dark,
       ),
       child: SafeArea(
         child: MaterialApp(
-          theme: _buildTheme(Brightness.light),
+          theme: ThemeData(brightness: Brightness.light).copyWith(
+            textTheme: GoogleFonts.poppinsTextTheme(),
+          ),
           title: 'Sea Adventure',
           home: const HomePage(),
           debugShowCheckedModeBanner: false,

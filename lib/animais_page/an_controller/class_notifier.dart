@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sea_adventure/area_aprendizagem/ap_body/an_lista_animais/class_animal_an.dart';
+import 'package:sea_adventure/animais_page/an_body/an_lista_animais/class_animal_an.dart';
 
 class NotifierAnimais with ChangeNotifier {
   // Armazena todos os animais cadastrados.

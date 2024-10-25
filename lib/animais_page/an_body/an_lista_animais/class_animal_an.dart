@@ -20,7 +20,7 @@ final class Animal {
       nome: 'ORCA',
       resumo:
           'São encontradas em todos os oceanos do mundo, desde águas frias como as da Antártida até regiões tropicais.',
-      imagem: 'lib/images/orca.png',
+      imagem: 'assets/images/orca.png',
       detalhes: RichText(
         text: TextSpan(
           style: GoogleFonts.getFont(
@@ -66,7 +66,7 @@ final class Animal {
         nome: 'ÁGUA-VIVA',
         resumo:
             'As águas-vivas são criaturas marinhas fascinantes, com corpos quase totalmente transparentes e gelatinosos.',
-        imagem: 'lib/images/aguaViva.png',
+        imagem: 'assets/images/aguaViva.png',
         detalhes: RichText(
           text: TextSpan(
             style: GoogleFonts.getFont(
