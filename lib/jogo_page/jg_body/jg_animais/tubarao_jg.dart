@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sea_adventure/utilities/class_animal_an.dart';
 import 'package:sea_adventure/jogo_page/jg_body/jg_dialog/dialog_detalhes_animal.dart';
 
 class Tubarao extends StatelessWidget {
@@ -13,21 +12,19 @@ class Tubarao extends StatelessWidget {
       child: const SizedBox(
         height: 120,
         child: Image(
-          image: AssetImage('assets/images/tubarao.png'),
+          image: AssetImage('assets/images/jogo_tubarao.png'),
         ),
       ),
       onTap: () {
-        Animal tubarao = Animal.animais
-            .where((element) => element.nome.contains('TUBARÃO'))
-            .first;
-
         showDialog(
           context: context,
-          builder: (context) => DialogDetalhesAnimal(
-            nome: tubarao.nome,
-            textoDialogJogo: tubarao.textoDialogJogo!,
-            urlImagem: 'assets/images/tubarao.png',
-            corDialog: const Color.fromARGB(255, 169, 209, 255),
+          builder: (context) => const DialogDetalhesAnimal(
+            nome: 'Tubarão',
+            textoDialogJogo:
+                'Os tubarões não possuem ossos! Em vez disso, seu esqueleto é formado por cartilagem, o que os torna mais leves e flexíveis, ajudando na velocidade e agilidade durante a caça. Essa característica também lhes dá a habilidade de crescer e se adaptar a diferentes ambientes ao longo de suas vidas.',
+            urlImagem: 'assets/images/jogo_tubarao.png',
+            corDialog: Color.fromARGB(255, 230, 239, 255),
+            corTexto: Color.fromARGB(255, 0, 21, 58),
           ),
         );
       },

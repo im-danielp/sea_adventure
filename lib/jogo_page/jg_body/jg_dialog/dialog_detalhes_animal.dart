@@ -6,9 +6,10 @@ import 'package:sea_adventure/utilities/funcoes.dart';
 /// Uso: background_jg.dart.
 class DialogDetalhesAnimal extends StatelessWidget {
   final String nome;
-  final RichText textoDialogJogo;
+  final String textoDialogJogo;
   final String urlImagem;
   final Color? corDialog;
+  final Color? corTexto;
 
   const DialogDetalhesAnimal({
     super.key,
@@ -16,6 +17,7 @@ class DialogDetalhesAnimal extends StatelessWidget {
     required this.textoDialogJogo,
     required this.urlImagem,
     this.corDialog,
+    this.corTexto,
   });
 
   @override
@@ -26,14 +28,19 @@ class DialogDetalhesAnimal extends StatelessWidget {
       actionsPadding: EdgeInsets.zero,
       insetPadding: EdgeInsets.symmetric(
           horizontal: MediaQuery.sizeOf(context).width < 1200 ? 40 : 400),
-      surfaceTintColor: corDialog ?? Colors.white,
+      backgroundColor: corDialog ?? Colors.white,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(15)),
       ),
       title: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(nome.toCapitalized),
+          Text(
+            nome.toCapitalized,
+            style: TextStyle(
+              color: corTexto ?? const Color.fromARGB(255, 39, 39, 39),
+            ),
+          ),
           const Gap(12),
           SizedBox(
             height: 60,
@@ -44,7 +51,13 @@ class DialogDetalhesAnimal extends StatelessWidget {
       content: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          textoDialogJogo,
+          Text(
+            textAlign: TextAlign.center,
+            textoDialogJogo,
+            style: TextStyle(
+              color: corTexto ?? const Color.fromARGB(255, 49, 49, 49),
+            ),
+          ),
         ],
       ),
     );
