@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:sea_adventure/jogo_page/jg_body/jg_animais/baleia_cachalote_jg.dart';
 import 'package:sea_adventure/jogo_page/jg_body/jg_animais/camarao_hadal_jg.dart';
 import 'package:sea_adventure/jogo_page/jg_body/jg_animais/caranguejo_jg.dart';
 import 'package:sea_adventure/jogo_page/jg_body/jg_animais/estrela_do_mar_jg.dart';
@@ -7,6 +8,7 @@ import 'package:sea_adventure/jogo_page/jg_body/jg_animais/golfinho_jg.dart';
 import 'package:sea_adventure/jogo_page/jg_body/jg_animais/lula_vampiro_jg.dart';
 import 'package:sea_adventure/jogo_page/jg_body/jg_animais/orca_jg.dart';
 import 'package:sea_adventure/jogo_page/jg_body/jg_animais/ovos_de_tartaruga_jg.dart';
+import 'package:sea_adventure/jogo_page/jg_body/jg_animais/peixe_bolha_jg.dart';
 import 'package:sea_adventure/jogo_page/jg_body/jg_animais/peixe_caracol_jg.dart';
 import 'package:sea_adventure/jogo_page/jg_body/jg_animais/peixe_diabo_negro_jg.dart';
 import 'package:sea_adventure/jogo_page/jg_body/jg_animais/peixe_dragao_jg.dart';
@@ -189,6 +191,12 @@ class Jogo extends StatelessWidget {
                 ),
                 child: const LulaVampiro(),
               ),
+              const Padding(
+                padding: EdgeInsets.only(
+                  top: 190,
+                ),
+                child: BaleiaCachalote(),
+              ),
 
               // -----------------------------------------Zona batipelágica-----------------------------------------
               Padding(
@@ -260,6 +268,13 @@ class Jogo extends StatelessWidget {
                 padding: EdgeInsets.only(
                   left: constraints.maxWidth * 0.5,
                   top: 180,
+                ),
+                child: const PeixeBolha(),
+              ),
+              Padding(
+                padding: EdgeInsets.only(
+                  right: constraints.maxWidth * 0.5,
+                  top: 140,
                 ),
                 child: const PepinoDoMar(),
               ),
