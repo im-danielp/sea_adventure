@@ -11,7 +11,8 @@ class Caranguejo extends StatelessWidget {
     return GestureDetector(
       child: const SizedBox(
         height: 60,
-        child: Image(image: AssetImage('assets/images/jogo_caranguejo.png')),
+        child:
+            Image(image: AssetImage('assets/images/jogo/jogo_caranguejo.png')),
       ),
       onTap: () {
         showDialog(
@@ -20,7 +21,7 @@ class Caranguejo extends StatelessWidget {
             nome: 'Caranguejo',
             textoDialogJogo:
                 'Caranguejos são crustáceos que habitam principalmente regiões costeiras, como praias e manguezais, onde encontram alimento abrigo. Em algumas áreas, como o litoral nordeste do Brasil, são vistos com frequência. As conchas e outros elementos encontrados na praia são para os caranguejos, pois oferecem proteção e ajudam na camuflagem, além de servirem como esconderijo contra predadores. Esses ambientes costeiros são ricos em matéria orgânica, o que facilita a alimentação dos caranguejos.',
-            urlImagem: 'assets/images/jogo_caranguejo.png',
+            urlImagem: 'assets/images/jogo/jogo_caranguejo.png',
             corDialog: Color.fromARGB(255, 255, 252, 229),
             corTexto: Color.fromARGB(255, 43, 38, 0),
           ),

@@ -12,7 +12,7 @@ class LulaVampiro extends StatelessWidget {
       child: const SizedBox(
         height: 120,
         child: Image(
-          image: AssetImage('assets/images/jogo_lula_vampiro.png'),
+          image: AssetImage('assets/images/jogo/jogo_lula_vampiro.png'),
         ),
       ),
       onTap: () {
@@ -22,7 +22,7 @@ class LulaVampiro extends StatelessWidget {
             nome: 'Lula vampiro',
             textoDialogJogo:
                 'Uma fascinante criatura das profundezas oceânicas, habitando principalmente a zona mesopelágica e batipelágica, entre 600 e 1.200 metros de profundidade, onde a luz solar não penetra. Apesar do nome, a lula-vampiro não é um predador agressivo; ela se alimenta de detritos orgânicos que flutuam nas águas profundas.',
-            urlImagem: 'assets/images/jogo_lula_vampiro.png',
+            urlImagem: 'assets/images/jogo/jogo_lula_vampiro.png',
             corDialog: Color.fromARGB(255, 255, 243, 240),
             corTexto: Color.fromARGB(255, 53, 11, 0),
           ),

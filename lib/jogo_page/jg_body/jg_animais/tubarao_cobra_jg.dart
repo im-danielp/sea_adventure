@@ -12,7 +12,7 @@ class TubaraoCobra extends StatelessWidget {
       child: const SizedBox(
         height: 120,
         child: Image(
-          image: AssetImage('assets/images/jogo_tubarao_cobra.png'),
+          image: AssetImage('assets/images/jogo/jogo_tubarao_cobra.png'),
         ),
       ),
       onTap: () {
@@ -22,7 +22,7 @@ class TubaraoCobra extends StatelessWidget {
             nome: 'Tubarão cobra',
             textoDialogJogo:
                 '(Chlamydoselachus anguineus) é uma espécie rara e primitiva de tubarão que vive em águas profundas, principalmente na zona batipelágica, a mais de 1.000 metros de profundidade. Com seu corpo longo e serpentino, ele se assemelha mais a uma enguia do que a um tubarão típico, e suas dentes afiados em forma de tridente lhe permitem agarrar presas como lulas e outros peixes com eficiência.',
-            urlImagem: 'assets/images/jogo_tubarao_cobra.png',
+            urlImagem: 'assets/images/jogo/jogo_tubarao_cobra.png',
             corDialog: Color.fromARGB(255, 112, 105, 74),
             corTexto: Color.fromARGB(255, 255, 253, 243),
           ),

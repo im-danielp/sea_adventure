@@ -12,7 +12,7 @@ class Tubarao extends StatelessWidget {
       child: const SizedBox(
         height: 120,
         child: Image(
-          image: AssetImage('assets/images/jogo_tubarao.png'),
+          image: AssetImage('assets/images/jogo/jogo_tubarao.png'),
         ),
       ),
       onTap: () {
@@ -22,7 +22,7 @@ class Tubarao extends StatelessWidget {
             nome: 'Tubarão',
             textoDialogJogo:
                 'Os tubarões não possuem ossos! Em vez disso, seu esqueleto é formado por cartilagem, o que os torna mais leves e flexíveis, ajudando na velocidade e agilidade durante a caça. Essa característica também lhes dá a habilidade de crescer e se adaptar a diferentes ambientes ao longo de suas vidas.',
-            urlImagem: 'assets/images/jogo_tubarao.png',
+            urlImagem: 'assets/images/jogo/jogo_tubarao.png',
             corDialog: Color.fromARGB(255, 230, 239, 255),
             corTexto: Color.fromARGB(255, 0, 21, 58),
           ),

@@ -38,27 +38,32 @@ class Jogo extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 15),
           width: double.maxFinite,
-          // decoration: const BoxDecoration(
-          //   image: DecorationImage(
-          //     image: AssetImage('assets/images/background_jogo.png'),
-          //     fit: BoxFit.fill,
-          //   ),
-          // ),
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/images/jogo/jogo_background.jpg'),
+              fit: BoxFit.fill,
+            ),
+          ),
           child: Column(
             children: [
               // -----------------------------------------Praia-----------------------------------------
               Padding(
-                padding: const EdgeInsets.only(top: 200),
+                padding: const EdgeInsets.only(top: 230),
                 child: Row(
                   children: [
                     Expanded(
                       child: Container(
-                        color: const Color.fromARGB(255, 185, 185, 185),
-                        height: 2,
+                        color: const Color.fromARGB(255, 182, 172, 81),
+                        height: 1,
                       ),
                     ),
                     const Gap(20),
-                    const Text('Praia'),
+                    const Text(
+                      'Praia',
+                      style: TextStyle(
+                        color: Color.fromARGB(255, 129, 115, 9),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -66,7 +71,7 @@ class Jogo extends StatelessWidget {
               const Text(
                 textAlign: TextAlign.center,
                 'Nesse ponto, conseguimos encontrar alguns animais sem nem entrar na água',
-                style: TextStyle(color: Colors.grey),
+                style: TextStyle(color: Color.fromARGB(255, 122, 116, 70)),
               ),
               Padding(
                 padding: EdgeInsets.only(
@@ -78,7 +83,7 @@ class Jogo extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(
                   right: constraints.maxWidth * 0.5,
-                  top: 200,
+                  top: 150,
                 ),
                 child: const OvosDeTartaruga(),
               ),
@@ -90,12 +95,17 @@ class Jogo extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Container(
-                        color: const Color.fromARGB(255, 185, 185, 185),
-                        height: 2,
+                        color: const Color.fromARGB(255, 205, 218, 255),
+                        height: 1,
                       ),
                     ),
                     const Gap(20),
-                    const Text('Zona intertidal'),
+                    const Text(
+                      'Zona intertidal',
+                      style: TextStyle(
+                        color: Color.fromARGB(255, 205, 218, 255),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -103,7 +113,7 @@ class Jogo extends StatelessWidget {
               const Text(
                 textAlign: TextAlign.center,
                 'Se prepare para um pequeno mergulho se quiser encontrar esses animais!',
-                style: TextStyle(color: Colors.grey),
+                style: TextStyle(color: Color.fromARGB(255, 205, 218, 255)),
               ),
               Padding(
                 padding: EdgeInsets.only(
@@ -126,12 +136,17 @@ class Jogo extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Container(
-                        color: const Color.fromARGB(255, 185, 185, 185),
+                        color: const Color.fromARGB(255, 205, 218, 255),
                         height: 2,
                       ),
                     ),
                     const Gap(20),
-                    const Text('Meio do oceano'),
+                    const Text(
+                      'Meio do oceano',
+                      style: TextStyle(
+                        color: Color.fromARGB(255, 205, 218, 255),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -139,7 +154,7 @@ class Jogo extends StatelessWidget {
               const Text(
                 textAlign: TextAlign.center,
                 'Melhor pegarmos alguns equipamentos de mergulho para explorar essa área',
-                style: TextStyle(color: Colors.grey),
+                style: TextStyle(color: Color.fromARGB(255, 205, 218, 255)),
               ),
               Padding(
                 padding: EdgeInsets.only(
@@ -169,12 +184,17 @@ class Jogo extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Container(
-                        color: const Color.fromARGB(255, 185, 185, 185),
+                        color: const Color.fromARGB(255, 205, 218, 255),
                         height: 2,
                       ),
                     ),
                     const Gap(20),
-                    const Text('Zona mesopelágica'),
+                    const Text(
+                      'Zona mesopelágica',
+                      style: TextStyle(
+                        color: Color.fromARGB(255, 205, 218, 255),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -182,7 +202,7 @@ class Jogo extends StatelessWidget {
               const Text(
                 textAlign: TextAlign.center,
                 'Já estamos a mais de 1.000m de profundidade. Há pouca luz, então não acontece fotossíntese aqui',
-                style: TextStyle(color: Colors.grey),
+                style: TextStyle(color: Color.fromARGB(255, 205, 218, 255)),
               ),
               Padding(
                 padding: EdgeInsets.only(
@@ -205,12 +225,17 @@ class Jogo extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Container(
-                        color: const Color.fromARGB(255, 185, 185, 185),
+                        color: const Color.fromARGB(255, 205, 218, 255),
                         height: 2,
                       ),
                     ),
                     const Gap(20),
-                    const Text('Zona batipelágica'),
+                    const Text(
+                      'Zona batipelágica',
+                      style: TextStyle(
+                        color: Color.fromARGB(255, 205, 218, 255),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -218,7 +243,7 @@ class Jogo extends StatelessWidget {
               const Text(
                 textAlign: TextAlign.center,
                 'A luz do Sol não consegue chegar tão fundo... está difícil coletar informações, vamos com cuidado!',
-                style: TextStyle(color: Colors.grey),
+                style: TextStyle(color: Color.fromARGB(255, 205, 218, 255)),
               ),
               Padding(
                 padding: EdgeInsets.only(
@@ -242,12 +267,17 @@ class Jogo extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Container(
-                        color: const Color.fromARGB(255, 185, 185, 185),
+                        color: const Color.fromARGB(255, 205, 218, 255),
                         height: 2,
                       ),
                     ),
                     const Gap(20),
-                    const Text('Zona abissopelágica'),
+                    const Text(
+                      'Zona abissopelágica',
+                      style: TextStyle(
+                        color: Color.fromARGB(255, 205, 218, 255),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -255,7 +285,7 @@ class Jogo extends StatelessWidget {
               const Text(
                 textAlign: TextAlign.center,
                 'Os peixes nessa região se adaptaram para viver em um ambiente escuro e frio',
-                style: TextStyle(color: Colors.grey),
+                style: TextStyle(color: Color.fromARGB(255, 205, 218, 255)),
               ),
               Padding(
                 padding: EdgeInsets.only(
@@ -286,12 +316,17 @@ class Jogo extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Container(
-                        color: const Color.fromARGB(255, 185, 185, 185),
+                        color: const Color.fromARGB(255, 205, 218, 255),
                         height: 2,
                       ),
                     ),
                     const Gap(20),
-                    const Text('Zona hadalpelágica'),
+                    const Text(
+                      'Zona hadalpelágica',
+                      style: TextStyle(
+                        color: Color.fromARGB(255, 205, 218, 255),
+                      ),
+                    ),
                   ],
                 ),
               ),
@@ -299,11 +334,11 @@ class Jogo extends StatelessWidget {
               const Text(
                 textAlign: TextAlign.center,
                 'Já estamos a mais de 6.000m de profundidade! Poucos organismos conseguem suportar a pressão aqui embaixo',
-                style: TextStyle(color: Colors.grey),
+                style: TextStyle(color: Color.fromARGB(255, 205, 218, 255)),
               ),
               Padding(
                 padding: EdgeInsets.only(
-                  left: constraints.maxWidth * 0.2,
+                  left: constraints.maxWidth * 0.4,
                   top: 50,
                 ),
                 child: const CamaraoHadal(),

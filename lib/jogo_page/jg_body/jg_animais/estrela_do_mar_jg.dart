@@ -12,7 +12,7 @@ class EstrelaDoMar extends StatelessWidget {
       child: const SizedBox(
         height: 40,
         child: Image(
-          image: AssetImage('assets/images/jogo_estrela_do_mar.png'),
+          image: AssetImage('assets/images/jogo/jogo_estrela_do_mar.png'),
         ),
       ),
       onTap: () {
@@ -22,7 +22,7 @@ class EstrelaDoMar extends StatelessWidget {
             nome: 'Estrela-do-mar',
             textoDialogJogo:
                 'Estrelas-do-mar são animais marinhos comumente encontrados em regiões costeiras. Elas têm um papel importante nesses ecossistemas, alimentando-se de moluscos e pequenos invertebrados. Suas cores vibrantes ajudam na camuflagem e atraem presas, enquanto sua capacidade de regenerar braços perdidos é uma estratégia de sobrevivência única, tornando-as adaptadas para lidar com predadores e mudanças ambientais.',
-            urlImagem: 'assets/images/jogo_estrela_do_mar.png',
+            urlImagem: 'assets/images/jogo/jogo_estrela_do_mar.png',
             corDialog: Color.fromARGB(255, 250, 244, 255),
             corTexto: Color.fromARGB(255, 30, 0, 51),
           ),

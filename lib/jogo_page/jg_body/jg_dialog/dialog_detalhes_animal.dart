@@ -3,21 +3,22 @@ import 'package:gap/gap.dart';
 import 'package:sea_adventure/utilities/funcoes.dart';
 
 /// Diálogo que aparece para o usuário assim que ele clica no animal do jogo.
+/// As informações são passadas através da chamada deste diálogo no objeto de cada animal.
 /// Uso: background_jg.dart.
 class DialogDetalhesAnimal extends StatelessWidget {
   final String nome;
   final String textoDialogJogo;
   final String urlImagem;
-  final Color? corDialog;
-  final Color? corTexto;
+  final Color corDialog;
+  final Color corTexto;
 
   const DialogDetalhesAnimal({
     super.key,
     required this.nome,
     required this.textoDialogJogo,
     required this.urlImagem,
-    this.corDialog,
-    this.corTexto,
+    required this.corDialog,
+    required this.corTexto,
   });
 
   @override
@@ -28,7 +29,7 @@ class DialogDetalhesAnimal extends StatelessWidget {
       actionsPadding: EdgeInsets.zero,
       insetPadding: EdgeInsets.symmetric(
           horizontal: MediaQuery.sizeOf(context).width < 1200 ? 40 : 400),
-      backgroundColor: corDialog ?? Colors.white,
+      backgroundColor: corDialog,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(15)),
       ),
@@ -38,7 +39,7 @@ class DialogDetalhesAnimal extends StatelessWidget {
           Text(
             nome.toCapitalized,
             style: TextStyle(
-              color: corTexto ?? const Color.fromARGB(255, 39, 39, 39),
+              color: corTexto,
             ),
           ),
           const Gap(12),
@@ -55,7 +56,7 @@ class DialogDetalhesAnimal extends StatelessWidget {
             textAlign: TextAlign.center,
             textoDialogJogo,
             style: TextStyle(
-              color: corTexto ?? const Color.fromARGB(255, 49, 49, 49),
+              color: corTexto,
             ),
           ),
         ],

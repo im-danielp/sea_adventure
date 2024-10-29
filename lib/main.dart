@@ -19,7 +19,9 @@ class MyApp extends StatelessWidget {
       child: SafeArea(
         child: MaterialApp(
           theme: ThemeData(brightness: Brightness.light).copyWith(
-            textTheme: GoogleFonts.poppinsTextTheme(),
+            textTheme: GoogleFonts.poppinsTextTheme().apply(
+              bodyColor: const Color.fromARGB(255, 49, 49, 49),
+            ),
           ),
           title: 'Sea Adventure',
           home: const HomePage(),

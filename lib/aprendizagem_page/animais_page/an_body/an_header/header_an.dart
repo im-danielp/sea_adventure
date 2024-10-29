@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:sea_adventure/animais_page/an_controller/class_notifier_animal.dart';
+import 'package:sea_adventure/aprendizagem_page/animais_page/an_controller/class_notifier_animal.dart';
 
 /// Título da página e pesquisa. O título é ocultado quando o usuárioo inicia uma pesquisa.
 /// Uso: body_an.dart.

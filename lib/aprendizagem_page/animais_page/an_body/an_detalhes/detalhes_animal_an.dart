@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sea_adventure/utilities/class_animal_an.dart';
+import 'package:sea_adventure/aprendizagem_page/animais_page/an_body/an_lista_animais/class_animal_an.dart';
 
 class DetalhesAnimal extends StatelessWidget {
   final Animal animal;
@@ -22,7 +22,9 @@ class DetalhesAnimal extends StatelessWidget {
                   height: 180,
                   decoration: const BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage('assets/images/backgroud_oceano.png'),
+                      image: AssetImage(
+                        'assets/images/lista_animais/backgroud_oceano.png',
+                      ),
                       fit: BoxFit.cover,
                     ),
                   ),

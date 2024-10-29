@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:sea_adventure/animais_page/an_body/an_detalhes/detalhes_animal_an.dart';
-import 'package:sea_adventure/utilities/class_animal_an.dart';
-import 'package:sea_adventure/animais_page/an_controller/class_notifier_animal.dart';
+import 'package:sea_adventure/aprendizagem_page/animais_page/an_body/an_detalhes/detalhes_animal_an.dart';
+import 'package:sea_adventure/aprendizagem_page/animais_page/an_body/an_lista_animais/class_animal_an.dart';
+import 'package:sea_adventure/aprendizagem_page/animais_page/an_controller/class_notifier_animal.dart';
 import 'package:sea_adventure/utilities/funcoes.dart';
 
 class ListaAnimais extends StatelessWidget {

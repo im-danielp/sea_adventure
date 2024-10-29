@@ -12,7 +12,7 @@ class Golfinho extends StatelessWidget {
       child: const SizedBox(
         height: 120,
         child: Image(
-          image: AssetImage('assets/images/jogo_golfinho.png'),
+          image: AssetImage('assets/images/jogo/jogo_golfinho.png'),
         ),
       ),
       onTap: () {
@@ -22,7 +22,7 @@ class Golfinho extends StatelessWidget {
             nome: 'Golfinho',
             textoDialogJogo:
                 'Uma das principais curiosidades sobre os golfinhos é sua habilidade de se comunicar e até se identificar pelo "nome"! Cada golfinho desenvolve um assobio único, usado para se reconhecer e chamar membros específicos do grupo. Essa capacidade vocal, combinada com sua inteligência e comportamento social, faz dos golfinhos um dos animais marinhos mais comunicativos e cooperativos.',
-            urlImagem: 'assets/images/jogo_golfinho.png',
+            urlImagem: 'assets/images/jogo/jogo_golfinho.png',
             corDialog: Color.fromARGB(255, 230, 251, 255),
             corTexto: Color.fromARGB(255, 0, 53, 49),
           ),

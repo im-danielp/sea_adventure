@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sea_adventure/jogo_page/jg_body/jg_header/header_jg.dart';
 import 'package:sea_adventure/jogo_page/jg_body/jg_background/background_jg.dart.dart';
+import 'package:sea_adventure/widgets/widgets.dart';
 
 class BodyJogo extends StatelessWidget {
   const BodyJogo({super.key});
@@ -11,7 +11,10 @@ class BodyJogo extends StatelessWidget {
       builder: (context, constraints) {
         return Column(
           children: [
-            const HeaderJogo(),
+            const HeaderPage(
+              titulo: 'Explore o oceano 🌊',
+              subtitulo: 'Role para baixo toque nos animais',
+            ),
             Jogo(constraints: constraints),
           ],
         );

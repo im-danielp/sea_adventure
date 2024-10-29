@@ -12,7 +12,7 @@ class OvosDeTartaruga extends StatelessWidget {
       child: const SizedBox(
         height: 80,
         child: Image(
-          image: AssetImage('assets/images/jogo_ovos_de_tartaruga.png'),
+          image: AssetImage('assets/images/jogo/jogo_ovos_de_tartaruga.png'),
         ),
       ),
       onTap: () {
@@ -22,7 +22,7 @@ class OvosDeTartaruga extends StatelessWidget {
             nome: 'Ovos de tartaruga',
             textoDialogJogo:
                 'Os ovos de tartaruga são depositados em praias arenosas, especialmente em regiões tropicais e subtropicais, onde as fêmeas cavam ninhos para proteger suas futuras crias. Esses ninhos são essenciais para a incubação, pois a temperatura da areia influencia o desenvolvimento e até o sexo dos filhotes. Após algumas semanas, as pequenas tartarugas eclodem e correm para o mar, iniciando sua jornada na natureza.',
-            urlImagem: 'assets/images/jogo_ovos_de_tartaruga.png',
+            urlImagem: 'assets/images/jogo/jogo_ovos_de_tartaruga.png',
             corDialog: Color.fromARGB(255, 242, 255, 236),
             corTexto: Color.fromARGB(255, 13, 41, 0),
           ),
