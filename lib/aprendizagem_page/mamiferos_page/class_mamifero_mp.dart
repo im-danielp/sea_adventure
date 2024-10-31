@@ -16,5 +16,17 @@ class Mamifero {
       nome: 'Leão-marinho',
       urlImagem: 'assets/images/mp_leao_marinho.webp',
     ),
+    Mamifero(
+      nome: 'Peixe-boi',
+      urlImagem: 'assets/images/mp_peixe_boi.webp',
+    ),
+    Mamifero(
+      nome: 'Golfinho',
+      urlImagem: 'assets/images/mp_golfinho.webp',
+    ),
+    Mamifero(
+      nome: 'Lobo-marinho',
+      urlImagem: 'assets/images/mp_lobo_marinho.jpg',
+    )
   ];
 }

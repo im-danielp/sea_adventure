@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:sea_adventure/aprendizagem_page/mamiferos_page/class_mamifero_mp.dart';
+import 'package:sea_adventure/aprendizagem_page/mamiferos_page/dialog_imagem_expandida_mp.dart';
 import 'package:sea_adventure/widgets/widgets.dart';
 
 class MamiferosPage extends StatelessWidget {
@@ -62,33 +63,46 @@ class MamiferosPage extends StatelessWidget {
                       ],
                     ),
                   ),
+
                   const Text(
-                    '\nQuando passamos a nos aprofundar acerca do comportamento das baleias e entender mais detalhes a respeito do ciclo de vida delas, podemos ficar surpresos com a beleza que isso envolve.\n\nNão é nenhuma novidade que esses grandes e majestosos animais são cercados de histórias e que também marcam presença no imaginário de muitos pescadores e homens que dedicam sua vida no mar desde que o mundo é mundo!\n\nEsses gigantes, o mar e seu comportamento único é algo que sempre envolve uma dose a mais de fascinação, inclusive para os cientistas que ainda, por incrível que pareça, conhecem bem pouco a respeito de sua trajetória.\n\nÉ importante destacar que esses imponentes seres do mar vieram de um ancestral terrestre, que era chamado de mesoniquídeos, muito semelhantes aos lobos, porém, com pernas mais curtas!',
+                    '\nQuando passamos a nos aprofundar acerca do comportamento das baleias e entender mais detalhes a respeito do ciclo de vida delas, podemos ficar surpresos com a beleza que isso envolve.\n\nNão é nenhuma novidade que esses grandes e majestosos animais são cercados de histórias e que também marcam presença no imaginário de muitos pescadores e homens que dedicam sua vida no mar desde que o mundo é mundo!\n',
                   ),
-                  const Gap(20),
                   // Carrossel de imagens.
                   SizedBox(
-                    height: 150,
+                    height: 180,
                     child: ListView.separated(
                       scrollDirection: Axis.horizontal,
                       padding: EdgeInsets.zero,
-                      separatorBuilder: (context, index) => const Gap(10),
+                      separatorBuilder: (context, index) => const Gap(15),
                       itemCount: mamiferos.length,
                       itemBuilder: (context, index) {
                         return Column(
                           children: [
                             Expanded(
-                              child: Container(
-                                width: MediaQuery.sizeOf(context).width * 0.8,
-                                decoration: const BoxDecoration(
-                                  color: Colors.orange,
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(10)),
+                              child: GestureDetector(
+                                child: Container(
+                                  width: MediaQuery.sizeOf(context).width * 0.7,
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      image: AssetImage(
+                                        mamiferos[index].urlImagem,
+                                      ),
+                                      fit: BoxFit.fill,
+                                    ),
+                                    borderRadius: const BorderRadius.all(
+                                      Radius.circular(10),
+                                    ),
+                                  ),
                                 ),
-                                child: Image(
-                                  image: AssetImage(mamiferos[index].urlImagem),
-                                  fit: BoxFit.fill,
-                                ),
+                                // Mostra a imagem com zoom.
+                                onTap: () {
+                                  showDialog(
+                                    context: context,
+                                    builder: (context) => DialogImagemExpandida(
+                                      urlImagem: mamiferos[index].urlImagem,
+                                    ),
+                                  );
+                                },
                               ),
                             ),
                             Text(mamiferos[index].nome),
@@ -98,7 +112,7 @@ class MamiferosPage extends StatelessWidget {
                     ),
                   ),
                   const Text(
-                    'Sua ida para o universo aquático em detrimento da falta de alimentos, e no decorrer de centenas de anos foi se adaptando a esse novo sistema por meio de uma seleção natural.',
+                    '\nEsses gigantes, o mar e seu comportamento único é algo que sempre envolve uma dose a mais de fascinação, inclusive para os cientistas que ainda, por incrível que pareça, conhecem bem pouco a respeito de sua trajetória.\nÉ importante destacar que esses imponentes seres do mar vieram de um ancestral terrestre, que era chamado de mesoniquídeos, muito semelhantes aos lobos, porém, com pernas mais curtas! \nSua ida para o universo aquático em detrimento da falta de alimentos, e no decorrer de centenas de anos foi se adaptando a esse novo sistema por meio de uma seleção natural.',
                   ),
 
                   // -------------------------------------Caracteristicas e curiosidades-------------------------------------
@@ -116,7 +130,7 @@ class MamiferosPage extends StatelessWidget {
                       children: [
                         TextSpan(
                           text:
-                              'São animais que produzem uma variedade de sons, em sua grande maioria ',
+                              '\nSão animais que produzem uma variedade de sons, em sua grande maioria ',
                         ),
                         TextSpan(
                           style: TextStyle(fontWeight: FontWeight.bold),
@@ -132,22 +146,39 @@ class MamiferosPage extends StatelessWidget {
                         ),
                         TextSpan(
                           text:
-                              '5.000 metros de profundidade e permanecendo, sem respirar, por mais de 2 horas.',
+                              '5.000 metros de profundidade e permanecendo, sem respirar, por mais de 2 horas.\n',
                         ),
                       ],
                     ),
                   ),
-                  const Image(
-                    image: AssetImage('mp_cachalote.jpg'),
+                  // Imagem cachalote.
+                  Column(
+                    children: [
+                      Container(
+                        height: 150,
+                        decoration: const BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage('assets/images/mp_cachalote.jpg'),
+                            fit: BoxFit.fill,
+                          ),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(10),
+                          ),
+                        ),
+                      ),
+                      const Text('Cachalote'),
+                    ],
                   ),
                   const Text.rich(
                     TextSpan(
                       children: [
                         TextSpan(
                           text:
-                              'Por sua vez, as jubartes possuem a habilidade de emitir padrões variados de sons, além de serem capazes de percorrer mais de 8.000 km durante a migração. E vale mencionar ainda a baleia-azul, considerada o ',
+                              '\nPor sua vez, as jubartes possuem a habilidade de emitir padrões variados de sons, além de serem capazes de percorrer mais de 8.000 km durante a migração. E vale mencionar ainda a baleia-azul, considerada o ',
                         ),
-                        TextSpan(text: 'maior mamífero do mundo,'),
+                        TextSpan(
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                            text: 'maior mamífero do mundo,'),
                         TextSpan(
                           style: TextStyle(color: Colors.blue),
                           text: 'alcançando até 30 metros e 200 toneladas.',
@@ -156,22 +187,40 @@ class MamiferosPage extends StatelessWidget {
                     ),
                   ),
                   const Text(
-                    '\n\nComo um grupo diversificado, ocupam uma extensa amplitude geográfica, cujo padrão de distribuição é influenciado por condições que satisfazem requisitos mínimos de habitat e nicho ecológico de cada espécie. Deste modo, exploram uma gama de habitats presentes em ambientes oceânicos, costeiros, estuarinos e de águas interiores.',
+                    '\nComo um grupo diversificado, ocupam uma extensa amplitude geográfica, cujo padrão de distribuição é influenciado por condições que satisfazem requisitos mínimos de habitat e nicho ecológico de cada espécie. Deste modo, exploram uma gama de habitats presentes em ambientes oceânicos, costeiros, estuarinos e de águas interiores.',
                   ),
                   const Text(
-                    '\n\nNo Brasil ocorrem, de forma contínua ou ocasional, 48 espécies de cetáceos (entre baleias, botos e golfinhos), sete espécies de pinípedes (dentre focas, lobos marinho, elefante marinho e leão marinho), duas espécies de lontras (ariranha e lontra neotropical) e duas de sirênios (peixe-boi-marinho e peixe-boi-da-Amazônia).',
+                    '\nNo Brasil ocorrem, de forma contínua ou ocasional, 48 espécies de cetáceos (entre baleias, botos e golfinhos), sete espécies de pinípedes (dentre focas, lobos marinho, elefante marinho e leão marinho), duas espécies de lontras (ariranha e lontra neotropical) e duas de sirênios (peixe-boi-marinho e peixe-boi-da-Amazônia).',
                   ),
                   const Text(
-                    '\n\nMamíferos aquáticos de águas interiores e costeiras vivem em locais onde há uma interação muito significativa com as populações humanas, já que compartilham trechos de habitats específicos e, frequentemente, utilizam recursos similares.',
+                    '\nMamíferos aquáticos de águas interiores e costeiras vivem em locais onde há uma interação muito significativa com as populações humanas, já que compartilham trechos de habitats específicos e, frequentemente, utilizam recursos similares.',
                   ),
                   const Text(
-                    '\n\nEm consequência disto são suscetíveis às distintas perturbações de origem antrópica (resultante da ação do ser humano), capazes de alterar o padrão de distribuição, manutenção e, em certos casos, a viabilidade da espécie impactada.',
+                    '\nEm consequência disto são suscetíveis às distintas perturbações de origem antrópica (resultante da ação do ser humano), capazes de alterar o padrão de distribuição, manutenção e, em certos casos, a viabilidade da espécie impactada.\n',
+                  ),
+                  // Imagem beluga.
+                  Column(
+                    children: [
+                      Container(
+                        height: 180,
+                        decoration: const BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage('assets/images/mp_beluga.webp'),
+                            fit: BoxFit.fill,
+                          ),
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(10),
+                          ),
+                        ),
+                      ),
+                      const Text('Beluga'),
+                    ],
                   ),
                   const Text.rich(
                     TextSpan(
                       children: [
                         TextSpan(
-                            text: '\n\nAinda que este grupo seja amplamente '),
+                            text: '\nAinda que este grupo seja amplamente '),
                         TextSpan(
                           style: TextStyle(color: Colors.blue),
                           text: 'protegido pelas leis ambientais',
@@ -184,11 +233,10 @@ class MamiferosPage extends StatelessWidget {
                     ),
                   ),
                   const Text(
-                    '\n\nDe um modo geral, são espécies com baixas taxas reprodutivas, crescimento lento e bioacumuladores, além de outras características biológicas, que os tornam mais vulneráveis que de outros grupos taxonômicos.',
+                    '\nDe um modo geral, são espécies com baixas taxas reprodutivas, crescimento lento e bioacumuladores, além de outras características biológicas, que os tornam mais vulneráveis que de outros grupos taxonômicos.\n',
                   ),
-                  const Image(
-                    image: AssetImage('assets/images/mp_beluga'),
-                  ),
+
+                  const Gap(15),
                 ],
               ),
             ),
