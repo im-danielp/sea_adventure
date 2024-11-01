@@ -1,19 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 final class Animal {
   final String nome;
   final String resumo;
   final String imagem;
-  final RichText detalhes;
-  final RichText? textoDialogJogo;
+  final Text? detalhes;
 
   Animal({
     required this.nome,
     required this.resumo,
     required this.imagem,
     required this.detalhes,
-    this.textoDialogJogo,
   });
 
   static List<Animal> animais = [
@@ -22,14 +19,10 @@ final class Animal {
       nome: 'ORCA',
       resumo:
           'São encontradas em todos os oceanos do mundo, desde águas frias como as da Antártida até regiões tropicais.',
-      imagem: 'assets/images/lista_animais/orca.png',
-      detalhes: RichText(
-        text: TextSpan(
-          style: GoogleFonts.getFont(
-            'Poppins',
-            color: const Color.fromARGB(255, 36, 36, 36),
-          ),
-          children: const [
+      imagem: 'assets/images/exposicao_animais/orca.png',
+      detalhes: const Text.rich(
+        TextSpan(
+          children: [
             TextSpan(
               text: 'Curiosidades sobre as orcas:\n\n',
               style: TextStyle(fontWeight: FontWeight.bold),
@@ -68,14 +61,10 @@ final class Animal {
       nome: 'ÁGUA-VIVA',
       resumo:
           'As águas-vivas são criaturas marinhas fascinantes, com corpos quase totalmente transparentes e gelatinosos.',
-      imagem: 'assets/images/lista_animais/agua_viva.png',
-      detalhes: RichText(
-        text: TextSpan(
-          style: GoogleFonts.getFont(
-            'Poppins',
-            color: const Color.fromARGB(255, 36, 36, 36),
-          ),
-          children: const [
+      imagem: 'assets/images/exposicao_animais/agua_viva.png',
+      detalhes: const Text.rich(
+        TextSpan(
+          children: [
             TextSpan(
               text: 'Curiosidade sobre a água-viva\n\n',
               style: TextStyle(
@@ -115,5 +104,23 @@ final class Animal {
         ),
       ),
     ),
+
+    // Baleia-Azul TODO: Term detalhes
+    Animal(
+      nome: 'Baleia-azul',
+      resumo:
+          'Verdadeiros titãs do oceano, conhecidas como os maiores animais que já existiram na Terra.',
+      imagem: 'assets/images/exposicao_animais/baleia_azul.png',
+      detalhes: const Text.rich(
+        TextSpan(
+          children: [
+            TextSpan(
+              style: TextStyle(fontWeight: FontWeight.bold),
+              text: 'Curiosidades:',
+            ),
+          ],
+        ),
+      ),
+    )
   ];
 }

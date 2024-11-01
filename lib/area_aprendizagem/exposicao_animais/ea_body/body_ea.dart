@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sea_adventure/aprendizagem_page/animais_page/an_body/an_header/header_an.dart';
-import 'package:sea_adventure/aprendizagem_page/animais_page/an_body/an_lista_animais/lista_animais_an.dart';
-import 'package:sea_adventure/aprendizagem_page/animais_page/an_controller/class_notifier_animal.dart';
+import 'package:sea_adventure/area_aprendizagem/exposicao_animais/ea_body/ea_header/header_ea.dart';
+import 'package:sea_adventure/area_aprendizagem/exposicao_animais/ea_body/ea_lista_animais/lista_animais_ea.dart';
+import 'package:sea_adventure/area_aprendizagem/exposicao_animais/ea_controller/class_notifier_animal.dart';
 
 class BodyAnimais extends StatelessWidget {
   const BodyAnimais({super.key});

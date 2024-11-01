@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sea_adventure/aprendizagem_page/animais_page/an_body/body_an.dart';
+import 'package:sea_adventure/area_aprendizagem/exposicao_animais/ea_body/body_ea.dart';
 
-class AnimaisPage extends StatelessWidget {
-  const AnimaisPage({super.key});
+class ExposicaoAnimais extends StatelessWidget {
+  const ExposicaoAnimais({super.key});
 
   @override
   Widget build(BuildContext context) {

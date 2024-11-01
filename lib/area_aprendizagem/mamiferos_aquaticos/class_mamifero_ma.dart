@@ -10,23 +10,23 @@ class Mamifero {
   static const List<Mamifero> mamiferos = [
     Mamifero(
       nome: 'Baleia-azul',
-      urlImagem: 'assets/images/mp_baleia_azul.webp',
+      urlImagem: 'assets/images/mamiferos_aquaticos/ma_baleia_azul.webp',
     ),
     Mamifero(
       nome: 'Leão-marinho',
-      urlImagem: 'assets/images/mp_leao_marinho.webp',
+      urlImagem: 'assets/images/mamiferos_aquaticos/ma_leao_marinho.webp',
     ),
     Mamifero(
       nome: 'Peixe-boi',
-      urlImagem: 'assets/images/mp_peixe_boi.webp',
+      urlImagem: 'assets/images/mamiferos_aquaticos/ma_peixe_boi.webp',
     ),
     Mamifero(
       nome: 'Golfinho',
-      urlImagem: 'assets/images/mp_golfinho.webp',
+      urlImagem: 'assets/images/mamiferos_aquaticos/ma_golfinho.webp',
     ),
     Mamifero(
       nome: 'Lobo-marinho',
-      urlImagem: 'assets/images/mp_lobo_marinho.jpg',
+      urlImagem: 'assets/images/mamiferos_aquaticos/ma_lobo_marinho.jpg',
     )
   ];
 }

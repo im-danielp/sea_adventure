@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:sea_adventure/aprendizagem_page/mamiferos_page/class_mamifero_mp.dart';
-import 'package:sea_adventure/aprendizagem_page/mamiferos_page/dialog_imagem_expandida_mp.dart';
+import 'package:sea_adventure/area_aprendizagem/mamiferos_aquaticos/class_mamifero_ma.dart';
+import 'package:sea_adventure/area_aprendizagem/mamiferos_aquaticos/dialog_imagem_expandida_ma.dart';
 import 'package:sea_adventure/widgets/widgets.dart';
 
-class MamiferosPage extends StatelessWidget {
-  const MamiferosPage({super.key});
+class MamiferosAquaticos extends StatelessWidget {
+  const MamiferosAquaticos({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -158,7 +158,8 @@ class MamiferosPage extends StatelessWidget {
                         height: 150,
                         decoration: const BoxDecoration(
                           image: DecorationImage(
-                            image: AssetImage('assets/images/mp_cachalote.jpg'),
+                            image: AssetImage(
+                                'assets/images/mamiferos_aquaticos/ma_cachalote.jpg'),
                             fit: BoxFit.fill,
                           ),
                           borderRadius: BorderRadius.all(
@@ -205,7 +206,8 @@ class MamiferosPage extends StatelessWidget {
                         height: 180,
                         decoration: const BoxDecoration(
                           image: DecorationImage(
-                            image: AssetImage('assets/images/mp_beluga.webp'),
+                            image: AssetImage(
+                                'assets/images/mamiferos_aquaticos/ma_beluga.webp'),
                             fit: BoxFit.fill,
                           ),
                           borderRadius: BorderRadius.all(

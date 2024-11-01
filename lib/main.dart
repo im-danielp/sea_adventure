@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sea_adventure/home_page.dart';
+import 'package:sea_adventure/home/home_page.dart';
 
 void main() {
   runApp(const MyApp());

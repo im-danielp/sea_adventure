@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:sea_adventure/aprendizagem_page/animais_page/animais_page.dart';
-import 'package:sea_adventure/aprendizagem_page/mamiferos_page/mamiferos_page.dart';
-import 'package:sea_adventure/aprendizagem_page/vegetacao_page/vegetacao_page.dart';
+import 'package:sea_adventure/area_aprendizagem/exposicao_animais/exposicao_animais.dart';
+import 'package:sea_adventure/area_aprendizagem/mamiferos_aquaticos/mamiferos_aquaticos.dart';
+import 'package:sea_adventure/area_aprendizagem/vegetacao_marinha/vegetacao_marinha.dart';
 
-class AprendizagemPage extends StatelessWidget {
-  const AprendizagemPage({super.key});
+class AreaAprendizagem extends StatelessWidget {
+  const AreaAprendizagem({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -51,17 +51,17 @@ class AprendizagemPage extends StatelessWidget {
                   onPressed: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => const AnimaisPage(),
+                        builder: (context) => const ExposicaoAnimais(),
                       ),
                     );
                   },
-                  child: const Text('Animais'),
+                  child: const Text('Exposição de animais'),
                 ),
                 TextButton(
                   onPressed: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => const MamiferosPage(),
+                        builder: (context) => const MamiferosAquaticos(),
                       ),
                     );
                   },
@@ -71,11 +71,11 @@ class AprendizagemPage extends StatelessWidget {
                   onPressed: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => const VegetacaoPage(),
+                        builder: (context) => const VegetacaoMarinha(),
                       ),
                     );
                   },
-                  child: const Text('Vegetação'),
+                  child: const Text('Vegetação marinha'),
                 ),
               ],
             ),
