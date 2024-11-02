@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:sea_adventure/area_aprendizagem/mamiferos_aquaticos/class_mamifero_ma.dart';
-import 'package:sea_adventure/area_aprendizagem/mamiferos_aquaticos/dialog_imagem_expandida_ma.dart';
 import 'package:sea_adventure/widgets/widgets.dart';
 
 class MamiferosAquaticos extends StatelessWidget {

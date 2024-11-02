@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sea_adventure/area_aprendizagem/exposicao_animais/ea_body/ea_lista_animais/class_animal_ea.dart';
+import 'package:sea_adventure/widgets/widgets.dart';
 
 class DetalhesAnimal extends StatelessWidget {
   final Animal animal;
@@ -21,14 +22,26 @@ class DetalhesAnimal extends StatelessWidget {
                   width: double.maxFinite,
                   height: 180,
                   decoration: const BoxDecoration(
+                    color: Color.fromARGB(255, 31, 31, 31),
                     image: DecorationImage(
                       image: AssetImage(
                         'assets/images/exposicao_animais/backgroud_oceano.png',
                       ),
+                      opacity: 0.6,
                       fit: BoxFit.cover,
                     ),
                   ),
-                  child: Image(image: AssetImage(animal.imagem)),
+                  child: GestureDetector(
+                    child: Image(
+                      image: AssetImage(animal.imagem),
+                    ),
+                    onTap: () => showDialog(
+                      context: context,
+                      builder: (context) => DialogImagemExpandida(
+                        urlImagem: animal.imagem,
+                      ),
+                    ),
+                  ),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(16),

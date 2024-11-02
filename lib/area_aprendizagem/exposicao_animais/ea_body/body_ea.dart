@@ -17,9 +17,9 @@ class BodyAnimais extends StatelessWidget {
           HeaderAnimal(notifierAnimais: notifierAnimais),
           ListenableBuilder(
             listenable: notifierAnimais,
-            builder: (context, child) {
-              return ListaAnimais(notifierAnimais: notifierAnimais);
-            },
+            builder: (context, child) => ListaAnimais(
+              notifierAnimais: notifierAnimais,
+            ),
           )
         ],
       ),

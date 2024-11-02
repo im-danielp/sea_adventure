@@ -55,3 +55,31 @@ class HeaderPage extends StatelessWidget {
     );
   }
 }
+
+/// Expande a imagem ao clicar nela, permitindo zoom.
+/// Precisa de um showDialog().
+class DialogImagemExpandida extends StatelessWidget {
+  final String urlImagem;
+
+  const DialogImagemExpandida({super.key, required this.urlImagem});
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: SizedBox(
+        width: MediaQuery.sizeOf(context).width * 0.9,
+        height: MediaQuery.sizeOf(context).height * 0.3,
+        child: InteractiveViewer(
+          panEnabled: false, // Set it to false
+          boundaryMargin: const EdgeInsets.all(100),
+          minScale: 0.5,
+          maxScale: 4,
+          child: Image.asset(
+            urlImagem,
+            fit: BoxFit.contain,
+          ),
+        ),
+      ),
+    );
+  }
+}
