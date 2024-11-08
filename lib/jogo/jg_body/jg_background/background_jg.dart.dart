@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:sea_adventure/jogo_page/jg_body/jg_animais/baleia_cachalote_jg.dart';
-import 'package:sea_adventure/jogo_page/jg_body/jg_animais/camarao_hadal_jg.dart';
-import 'package:sea_adventure/jogo_page/jg_body/jg_animais/caranguejo_jg.dart';
-import 'package:sea_adventure/jogo_page/jg_body/jg_animais/estrela_do_mar_jg.dart';
-import 'package:sea_adventure/jogo_page/jg_body/jg_animais/golfinho_jg.dart';
-import 'package:sea_adventure/jogo_page/jg_body/jg_animais/lula_vampiro_jg.dart';
-import 'package:sea_adventure/jogo_page/jg_body/jg_animais/orca_jg.dart';
-import 'package:sea_adventure/jogo_page/jg_body/jg_animais/ovos_de_tartaruga_jg.dart';
-import 'package:sea_adventure/jogo_page/jg_body/jg_animais/peixe_bolha_jg.dart';
-import 'package:sea_adventure/jogo_page/jg_body/jg_animais/peixe_caracol_jg.dart';
-import 'package:sea_adventure/jogo_page/jg_body/jg_animais/peixe_diabo_negro_jg.dart';
-import 'package:sea_adventure/jogo_page/jg_body/jg_animais/peixe_dragao_jg.dart';
-import 'package:sea_adventure/jogo_page/jg_body/jg_animais/pepino_do_mar_jg.dart';
-import 'package:sea_adventure/jogo_page/jg_body/jg_animais/polvo_jg.dart';
-import 'package:sea_adventure/jogo_page/jg_body/jg_animais/tubarao_cobra_jg.dart';
-import 'package:sea_adventure/jogo_page/jg_body/jg_animais/tubarao_jg.dart';
+import 'package:sea_adventure/jogo/jg_body/jg_animais/baleia_cachalote_jg.dart';
+import 'package:sea_adventure/jogo/jg_body/jg_animais/camarao_hadal_jg.dart';
+import 'package:sea_adventure/jogo/jg_body/jg_animais/caranguejo_jg.dart';
+import 'package:sea_adventure/jogo/jg_body/jg_animais/estrela_do_mar_jg.dart';
+import 'package:sea_adventure/jogo/jg_body/jg_animais/golfinho_jg.dart';
+import 'package:sea_adventure/jogo/jg_body/jg_animais/lula_vampiro_jg.dart';
+import 'package:sea_adventure/jogo/jg_body/jg_animais/orca_jg.dart';
+import 'package:sea_adventure/jogo/jg_body/jg_animais/ovos_de_tartaruga_jg.dart';
+import 'package:sea_adventure/jogo/jg_body/jg_animais/peixe_bolha_jg.dart';
+import 'package:sea_adventure/jogo/jg_body/jg_animais/peixe_caracol_jg.dart';
+import 'package:sea_adventure/jogo/jg_body/jg_animais/peixe_diabo_negro_jg.dart';
+import 'package:sea_adventure/jogo/jg_body/jg_animais/peixe_dragao_jg.dart';
+import 'package:sea_adventure/jogo/jg_body/jg_animais/pepino_do_mar_jg.dart';
+import 'package:sea_adventure/jogo/jg_body/jg_animais/polvo_jg.dart';
+import 'package:sea_adventure/jogo/jg_body/jg_animais/tubarao_cobra_jg.dart';
+import 'package:sea_adventure/jogo/jg_body/jg_animais/tubarao_jg.dart';
 
 /// Background onde mostra os animais e o plano de fundo.
 /// Os animais são posicionados através do Padding e objeto de cada animal está em jg_body.

@@ -1,3 +1,4 @@
+/// Usada para a montagem do carrossel na página de mamíferos.
 class Mamifero {
   final String nome;
   final String urlImagem;

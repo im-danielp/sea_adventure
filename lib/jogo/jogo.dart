@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sea_adventure/jogo_page/jg_body/body_jg.dart';
+import 'package:sea_adventure/jogo/jg_body/body_jg.dart';
 
-class JogoPage extends StatelessWidget {
-  const JogoPage({super.key});
+class Jogo extends StatelessWidget {
+  const Jogo({super.key});
 
   @override
   Widget build(BuildContext context) {

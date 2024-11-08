@@ -66,6 +66,7 @@ flutter:
     - assets/images/jogo/
     - assets/images/exposicao_animais/
     - assets/images/mamiferos_aquaticos/
+    - assets/images/vegetacao_marinha/
     - assets/images/icon/
 
   # An image asset can refer to one or more resolution-specific "variants", see

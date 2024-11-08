@@ -24,15 +24,7 @@ class MamiferosAquaticos extends StatelessWidget {
               child: Column(
                 children: [
                   // -------------------------------------Quem são os mamíferos aquáticos?-------------------------------------
-                  const Text(
-                    textAlign: TextAlign.center,
-                    'Quem são os mamíferos aquáticos?',
-                    style: TextStyle(
-                      color: Colors.lightBlueAccent,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
+                  const Titulo(msg: 'Quem são os mamíferos aquáticos?'),
                   const Gap(20),
                   const Text(
                     textAlign: TextAlign.justify,
@@ -224,7 +216,7 @@ class MamiferosAquaticos extends StatelessWidget {
                             text: '\nAinda que este grupo seja amplamente '),
                         TextSpan(
                           style: TextStyle(color: Colors.blue),
-                          text: 'protegido pelas leis ambientais',
+                          text: 'protegido pelas leis ambientais ',
                         ),
                         TextSpan(
                           text:

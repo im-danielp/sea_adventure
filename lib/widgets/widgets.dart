@@ -70,7 +70,7 @@ class DialogImagemExpandida extends StatelessWidget {
         width: MediaQuery.sizeOf(context).width * 0.9,
         height: MediaQuery.sizeOf(context).height * 0.3,
         child: InteractiveViewer(
-          panEnabled: false, // Set it to false
+          panEnabled: false,
           boundaryMargin: const EdgeInsets.all(100),
           minScale: 0.5,
           maxScale: 4,
@@ -79,6 +79,67 @@ class DialogImagemExpandida extends StatelessWidget {
             fit: BoxFit.contain,
           ),
         ),
+      ),
+    );
+  }
+}
+
+/// Mostra uma imagem e a deixa apta a ter zoom ao clicar. Mais usual para imagens que não têm
+/// fundo transparente, pois coloca a imagem em um container e cria bordas.
+///
+/// A alturar pode ser modificada. Por padrão é 180.
+///
+/// Requer a url da imagem e o dialogo usado como zoom é o "DialogImagemExpandida", ainda neste arquivo.
+class ImagemComZoom extends StatelessWidget {
+  final String urlImagem;
+  final double height;
+
+  const ImagemComZoom({super.key, required this.urlImagem, this.height = 180});
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      child: Container(
+        height: height,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(urlImagem),
+            fit: BoxFit.cover,
+          ),
+          borderRadius: const BorderRadius.all(
+            Radius.circular(10),
+          ),
+        ),
+      ),
+      // Mostra a imagem com zoom.
+      onTap: () {
+        showDialog(
+          context: context,
+          builder: (context) => DialogImagemExpandida(
+            urlImagem: urlImagem,
+          ),
+        );
+      },
+    );
+  }
+}
+
+/// Títulos usados em páginas de textos.
+/// Deixa o texto meior, em negrito e azul.
+class Titulo extends StatelessWidget {
+  final String msg;
+
+  const Titulo({super.key, required this.msg});
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      textAlign: TextAlign.center,
+      msg,
+      style: const TextStyle(
+        color: Colors.lightBlueAccent,
+        fontSize: 18,
+        fontWeight: FontWeight.bold,
       ),
     );
   }

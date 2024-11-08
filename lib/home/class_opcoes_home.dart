@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:sea_adventure/area_aprendizagem/area_aprendizagem.dart';
 import 'package:sea_adventure/curiosidades/curiosidades.dart';
-import 'package:sea_adventure/jogo_page/jogo_page.dart';
-import 'package:sea_adventure/oceanos_page/oceanos_page.dart';
-import 'package:sea_adventure/parceiros/parceiros.dart';
+import 'package:sea_adventure/jogo/jogo.dart';
+import 'package:sea_adventure/oceanos/oceanos.dart';
+import 'package:sea_adventure/aliados_do_mar/parceiros.dart';
 
 class OpcoesHome {
   final String titulo;
@@ -30,12 +30,12 @@ class OpcoesHome {
     OpcoesHome(
       titulo: 'Oceanos',
       urlImagemBg: 'assets/images/bg_oceanos.jpg',
-      pagina: OceanosPage(),
+      pagina: Oceanos(),
     ),
     OpcoesHome(
       titulo: 'Jogo',
       urlImagemBg: 'assets/images/bg_jogo.jpg',
-      pagina: JogoPage(),
+      pagina: Jogo(),
     ),
     OpcoesHome(
       titulo: 'Parceiros',

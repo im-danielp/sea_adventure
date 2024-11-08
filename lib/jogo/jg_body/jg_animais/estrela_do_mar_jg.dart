@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sea_adventure/jogo_page/jg_body/jg_dialog/dialog_detalhes_animal.dart';
+import 'package:sea_adventure/jogo/jg_body/jg_dialog/dialog_detalhes_animal.dart';
 
 class EstrelaDoMar extends StatelessWidget {
   const EstrelaDoMar({

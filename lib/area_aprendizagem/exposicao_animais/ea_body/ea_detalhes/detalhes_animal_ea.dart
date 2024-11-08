@@ -20,7 +20,7 @@ class DetalhesAnimal extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.symmetric(vertical: 20),
                   width: double.maxFinite,
-                  height: 180,
+                  height: 200,
                   decoration: const BoxDecoration(
                     color: Color.fromARGB(255, 31, 31, 31),
                     image: DecorationImage(
