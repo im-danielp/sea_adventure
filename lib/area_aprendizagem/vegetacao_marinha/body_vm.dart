@@ -166,10 +166,93 @@ class BodyVegetacaoMarinha extends StatelessWidget {
                     ],
                   ),
                 ),
+
+                // --------------------------------------- Ameaças à vegetação marinha ---------------------------------------
+                Titulo(msg: '\nAmeaças à vegetação marinha'),
+                ImagemComZoom(
+                  urlImagem:
+                      'assets/images/vegetacao_marinha/corais_mortos.webp',
+                ),
+                Text('\nA vegetação marinha enfrenta diversas ameaças, como:'),
+                Text.rich(
+                  TextSpan(
+                    children: [
+                      TextSpan(
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                        text: '\n• Poluição: ',
+                      ),
+                      TextSpan(
+                        text:
+                            'A descarga de esgotos e outros poluentes causa a eutrofização das águas, levando à proliferação de algas nocivas e à morte de outras espécies.',
+                      ),
+                      TextSpan(
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                        text: '\n\n• Sedimentação: ',
+                      ),
+                      TextSpan(
+                        text:
+                            'A erosão do solo e o assoreamento dos rios aumentam a quantidade de sedimentos nas águas, reduzindo a quantidade de luz disponível para as algas.',
+                      ),
+                      TextSpan(
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                        text: '\n\n• Mudanças climáticas: ',
+                      ),
+                      TextSpan(
+                        text:
+                            'O aumento da temperatura da água e a acidificação dos oceanos afetam o crescimento e a sobrevivência das algas.',
+                      ),
+                      TextSpan(
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                        text: '\n\n• Exploração excessiva: ',
+                      ),
+                      TextSpan(
+                        text:
+                            'A coleta de algas para fins alimentícios e ornamentais pode levar ao esgotamento de algumas espécies.',
+                      ),
+                    ],
+                  ),
+                ),
+
+                // --------------------------------------- Conservação da vegetação marinha ---------------------------------------
+                Titulo(msg: '\nConservação da vegetação marinha'),
+                Text(
+                  '\nPara proteger a vegetação marinha, é fundamental adotar medidas como:',
+                ),
+                Text.rich(
+                  TextSpan(
+                    children: [
+                      TextSpan(
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                        text: '\n• Criação de áreas marinhas protegidas: ',
+                      ),
+                      TextSpan(
+                        text:
+                            'Essas áreas restringem atividades como a pesca e a coleta de algas, permitindo a recuperação dos ecossistemas.',
+                      ),
+                      TextSpan(
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                        text: '\n\n• Controle da poluição: ',
+                      ),
+                      TextSpan(
+                        text:
+                            'É necessário investir em tratamento de esgotos e em medidas para reduzir a emissão de gases do efeito estufa.',
+                      ),
+                      TextSpan(
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                        text: '\n\n• Educação ambiental: ',
+                      ),
+                      TextSpan(
+                        text:
+                            'A conscientização da população sobre a importância da vegetação marinha e as ameaças que enfrenta é fundamental para garantir a sua proteção.',
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
         ),
+        Gap(15),
       ],
     );
   }
