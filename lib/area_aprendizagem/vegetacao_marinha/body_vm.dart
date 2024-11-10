@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:sea_adventure/widgets/widgets.dart';
@@ -9,13 +7,13 @@ class BodyVegetacaoMarinha extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       children: [
         HeaderPage(titulo: 'Vegetação marinha'),
         Expanded(
           child: SingleChildScrollView(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 20,
+            padding: EdgeInsets.symmetric(
+              horizontal: 15,
               vertical: 5,
             ),
             child: Column(

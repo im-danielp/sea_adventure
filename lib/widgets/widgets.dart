@@ -33,9 +33,7 @@ class HeaderPage extends StatelessWidget {
             children: [
               Text(
                 titulo,
-                style: const TextStyle(
-                  fontSize: 18,
-                ),
+                style: const TextStyle(fontSize: 17),
               ),
               // Mostra subtitulo apenas se informado.
               Visibility(
@@ -134,12 +132,34 @@ class Titulo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      textAlign: TextAlign.center,
       msg,
+      textAlign: TextAlign.center,
       style: const TextStyle(
         color: Colors.lightBlueAccent,
         fontSize: 18,
         fontWeight: FontWeight.bold,
+      ),
+    );
+  }
+}
+
+class SubTitulo extends StatelessWidget {
+  final String msg;
+
+  const SubTitulo({super.key, required this.msg});
+
+  @override
+  Widget build(BuildContext context) {
+    return Align(
+      alignment: Alignment.centerLeft,
+      child: Text(
+        msg,
+        textAlign: TextAlign.end,
+        style: const TextStyle(
+          color: Color.fromARGB(255, 29, 94, 124),
+          fontSize: 14,
+          fontWeight: FontWeight.bold,
+        ),
       ),
     );
   }

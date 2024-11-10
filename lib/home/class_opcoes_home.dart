@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:sea_adventure/area_aprendizagem/area_aprendizagem.dart';
-import 'package:sea_adventure/curiosidades/curiosidades.dart';
+import 'package:sea_adventure/segredos_do_mar/curiosidades.dart';
 import 'package:sea_adventure/jogo/jogo.dart';
 import 'package:sea_adventure/oceanos/oceanos.dart';
-import 'package:sea_adventure/aliados_do_mar/parceiros.dart';
+import 'package:sea_adventure/aliados_do_mar/aliados_do_mar.dart';
 
+/// Listagem das páginas que aparecem no home.
+/// Recebe um título, imagem de fundo e o widget da página.
 class OpcoesHome {
   final String titulo;
   final String urlImagemBg;
@@ -23,9 +25,9 @@ class OpcoesHome {
       pagina: AreaAprendizagem(),
     ),
     OpcoesHome(
-      titulo: 'Curiosidades',
+      titulo: 'Segredos do mar',
       urlImagemBg: 'assets/images/bg_curiosidades.jpg',
-      pagina: Curiosidades(),
+      pagina: SegredosDoMar(),
     ),
     OpcoesHome(
       titulo: 'Oceanos',
@@ -38,9 +40,9 @@ class OpcoesHome {
       pagina: Jogo(),
     ),
     OpcoesHome(
-      titulo: 'Parceiros',
+      titulo: 'Aliados do Mar',
       urlImagemBg: '',
-      pagina: Parceiros(),
+      pagina: AliadosDoMar(),
     )
   ];
 }

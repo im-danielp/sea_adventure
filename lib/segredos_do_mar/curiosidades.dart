@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Curiosidades extends StatelessWidget {
-  const Curiosidades({super.key});
+class SegredosDoMar extends StatelessWidget {
+  const SegredosDoMar({super.key});
 
   @override
   Widget build(BuildContext context) {
