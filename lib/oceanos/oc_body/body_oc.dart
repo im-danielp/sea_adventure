@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
+import 'package:sea_adventure/oceanos/oc_body/oc_infos/oceano_indico_oc.dart';
 import 'package:sea_adventure/oceanos/oc_body/oc_infos/oceano_pacifico_oc.dart';
 
 class BodyOceanos extends StatelessWidget {
@@ -19,6 +21,10 @@ class BodyOceanos extends StatelessWidget {
       child: Column(
         children: [
           OceanoPacifico(key: secoes[0]),
+          const Gap(20),
+          const Divider(),
+          const Gap(20),
+          OceanoIndico(key: secoes[1]),
         ],
       ),
     );

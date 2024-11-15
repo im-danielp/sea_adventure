@@ -16,6 +16,7 @@ class DrawerOceano extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      width: 260,
       backgroundColor: Colors.white,
       child: Wrap(
         runSpacing: 16,
