@@ -2,32 +2,26 @@
 
 import 'package:flutter/material.dart';
 import 'package:sea_adventure/oceanos/oc_body/body_oc.dart';
+import 'package:sea_adventure/oceanos/oc_body/oc_footer/navigation_bar_oc.dart';
 import 'package:sea_adventure/oceanos/oc_body/oc_header/appbar_oc.dart';
-import 'package:sea_adventure/oceanos/oc_body/oc_header/drawer_oc.dart';
 
-class Oceanos extends StatelessWidget {
+class Oceanos extends StatefulWidget {
   const Oceanos({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    /// Variáveis necessárias para configuração do direcionamento de seção.
-    final ScrollController scrollController = ScrollController();
-    final GlobalKey pacifico = GlobalKey();
-    final GlobalKey indico = GlobalKey();
-    final GlobalKey artico = GlobalKey();
-    final List<GlobalKey> secoes = [pacifico, indico, artico];
+  State<Oceanos> createState() => _OceanosState();
+}
 
+class _OceanosState extends State<Oceanos> {
+  void refresh() => setState(() {});
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBarOceano(),
-      endDrawer: DrawerOceano(
-        scrollController: scrollController,
-        secoes: secoes,
-      ),
-      body: BodyOceanos(
-        scrollController: scrollController,
-        secoes: secoes,
-      ),
+      body: BodyOceanos(),
+      bottomNavigationBar: NavigationBarOceano(refresh: refresh),
     );
   }
 }

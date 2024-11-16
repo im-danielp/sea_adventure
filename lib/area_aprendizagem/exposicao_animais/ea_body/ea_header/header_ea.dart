@@ -34,7 +34,7 @@ class _HeaderAnimalState extends State<HeaderAnimal> {
           Visibility(
             visible: pesquisaController.text == '',
             child: const Text(
-              'Animais',
+              'Expositório',
               style: TextStyle(fontSize: 18),
             ),
           ),
