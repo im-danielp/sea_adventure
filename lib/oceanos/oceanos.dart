@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:sea_adventure/oceanos/oc_body/body_oc.dart';
 import 'package:sea_adventure/oceanos/oc_body/oc_footer/navigation_bar_oc.dart';
@@ -19,8 +17,8 @@ class _OceanosState extends State<Oceanos> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBarOceano(),
-      body: BodyOceanos(),
+      appBar: const AppBarOceano(),
+      body: const BodyOceanos(),
       bottomNavigationBar: NavigationBarOceano(refresh: refresh),
     );
   }
