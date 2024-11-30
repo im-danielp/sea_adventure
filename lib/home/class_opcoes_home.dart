@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sea_adventure/area_aprendizagem/area_aprendizagem.dart';
-import 'package:sea_adventure/segredos_do_mar/curiosidades.dart';
+import 'package:sea_adventure/segredos_do_mar/segredos_do_mar.dart';
 import 'package:sea_adventure/jogo/jogo.dart';
 import 'package:sea_adventure/oceanos/oceanos.dart';
 import 'package:sea_adventure/aliados_do_mar/aliados_do_mar.dart';

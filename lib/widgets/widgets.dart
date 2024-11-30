@@ -143,6 +143,8 @@ class Titulo extends StatelessWidget {
   }
 }
 
+/// Subtitulo usado nos textos.
+/// Cor azul e fonte 14.
 class SubTitulo extends StatelessWidget {
   final String msg;
 

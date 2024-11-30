@@ -22,10 +22,11 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
+    - assets/icon/
     - assets/images/
     - assets/images/jogo/
     - assets/images/exposicao_animais/
     - assets/images/mamiferos_aquaticos/
     - assets/images/vegetacao_marinha/
+    - assets/images/segredos_do_mar/
     - assets/images/oceanos/
-    - assets/icon/
