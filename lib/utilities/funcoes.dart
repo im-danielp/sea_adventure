@@ -16,19 +16,17 @@ extension StringCasingExtension on String {
 /// Permite ir até rolar até outra seção da página.
 /// Precisa informar a key da seção e o controller do scroll.
 /// Geralmente usado em um Drawer.
-void irParaSecao(
-  BuildContext context,
-  GlobalKey key,
-  ScrollController scrollController,
-) {
+void irParaSecao({
+  required BuildContext context,
+  required GlobalKey key,
+  required ScrollController scrollController,
+}) {
   WidgetsBinding.instance.addPostFrameCallback(
     (_) {
       final context = key.currentContext;
       if (context != null) {
         final box = context.findRenderObject() as RenderBox;
         final offset = box.localToGlobal(Offset.zero).dy;
-
-        // Subtraindo a altura do AppBar para evitar que a seção fique atrás dele
         const appBarHeight = kToolbarHeight;
 
         scrollController.animateTo(

@@ -54,6 +54,7 @@ class HeaderPage extends StatelessWidget {
   }
 }
 
+/// ##############################################################################################
 /// Expande a imagem ao clicar nela, permitindo zoom.
 /// Precisa de um showDialog().
 class DialogImagemExpandida extends StatelessWidget {
@@ -82,6 +83,7 @@ class DialogImagemExpandida extends StatelessWidget {
   }
 }
 
+/// ##############################################################################################
 /// Mostra uma imagem e a deixa apta a ter zoom ao clicar. Mais usual para imagens que não têm
 /// fundo transparente, pois coloca a imagem em um container e cria bordas.
 ///
@@ -90,13 +92,51 @@ class DialogImagemExpandida extends StatelessWidget {
 /// Requer a url da imagem e o dialogo usado como zoom é o "DialogImagemExpandida", ainda neste arquivo.
 class ImagemComZoom extends StatelessWidget {
   final String urlImagem;
+  final String? legenda;
   final double height;
 
-  const ImagemComZoom({super.key, required this.urlImagem, this.height = 180});
+  const ImagemComZoom({
+    super.key,
+    required this.urlImagem,
+    this.height = 180,
+    this.legenda = '',
+  });
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return Column(
+      children: [
+        GestureDetector(
+          child: Container(
+            height: 180,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage(
+                  urlImagem,
+                ),
+                fit: BoxFit.cover,
+              ),
+              borderRadius: const BorderRadius.all(
+                Radius.circular(10),
+              ),
+            ),
+          ),
+          onTap: () {
+            showDialog(
+              context: context,
+              builder: (context) => DialogImagemExpandida(
+                urlImagem: urlImagem,
+              ),
+            );
+          },
+        ),
+        Visibility(
+          visible: legenda != '',
+          child: Text(legenda!),
+        ),
+      ],
+    );
+    /*GestureDetector(
       child: Container(
         height: height,
         decoration: BoxDecoration(
@@ -118,10 +158,11 @@ class ImagemComZoom extends StatelessWidget {
           ),
         );
       },
-    );
+    );*/
   }
 }
 
+/// ##############################################################################################
 /// Títulos usados em páginas de textos.
 /// Deixa o texto meior, em negrito e azul.
 class Titulo extends StatelessWidget {
@@ -143,8 +184,8 @@ class Titulo extends StatelessWidget {
   }
 }
 
+/// ##############################################################################################
 /// Subtitulo usado nos textos.
-/// Cor azul e fonte 14.
 class SubTitulo extends StatelessWidget {
   final String msg;
 
@@ -158,10 +199,31 @@ class SubTitulo extends StatelessWidget {
         msg,
         textAlign: TextAlign.end,
         style: const TextStyle(
-          color: Color.fromARGB(255, 29, 94, 124),
-          fontSize: 14,
+          color: Color.fromARGB(255, 45, 128, 167),
           fontWeight: FontWeight.bold,
         ),
+      ),
+    );
+  }
+}
+
+/// ##############################################################################################
+/// Subtitulo H3. Requer somente um texto para formatação.
+class Subtitulo3 extends StatelessWidget {
+  final String msg;
+
+  const Subtitulo3({
+    super.key,
+    required this.msg,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      '\n$msg',
+      style: const TextStyle(
+        fontWeight: FontWeight.bold,
+        color: Color.fromARGB(255, 29, 94, 124),
       ),
     );
   }

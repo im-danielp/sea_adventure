@@ -173,7 +173,7 @@ class MamiferosAquaticos extends StatelessWidget {
                             text: 'maior mamífero do mundo,'),
                         TextSpan(
                           style: TextStyle(color: Colors.blue),
-                          text: 'alcançando até 30 metros e 200 toneladas.',
+                          text: ' alcançando até 30 metros e 200 toneladas.',
                         ),
                       ],
                     ),
@@ -198,7 +198,8 @@ class MamiferosAquaticos extends StatelessWidget {
                         decoration: const BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage(
-                                'assets/images/mamiferos_aquaticos/ma_beluga.webp'),
+                              'assets/images/mamiferos_aquaticos/ma_beluga.webp',
+                            ),
                             fit: BoxFit.fill,
                           ),
                           borderRadius: BorderRadius.all(
