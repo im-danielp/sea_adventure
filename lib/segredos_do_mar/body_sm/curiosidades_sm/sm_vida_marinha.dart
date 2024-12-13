@@ -17,7 +17,13 @@ class SegredosMarVidaMarinhaBr extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: const [
         Gap(15),
-        SubTitulo(msg: '○ Vida marinha brasileira'),
+        Row(
+          children: [
+            SubTitulo(msg: '○ Vida marinha brasileira'),
+            Gap(15),
+            Expanded(child: Divider()),
+          ],
+        ),
         Gap(10),
         Text(
           'O Brasil, com sua vasta costa litorânea, abriga uma rica biodiversidade marinha, repleta de criaturas incríveis e adaptações fascinantes. Vamos mergulhar nesse universo e descobrir algumas curiosidades sobre as espécies que habitam nossos oceanos:',

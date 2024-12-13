@@ -16,7 +16,13 @@ class SegredosMarOndasBioluminescentes extends StatelessWidget {
       key: keySecao,
       children: const [
         Gap(15),
-        SubTitulo(msg: '○ Ondas bioluminescentes'),
+        Row(
+          children: [
+            SubTitulo(msg: '○ Ondas bioluminescentes'),
+            Gap(15),
+            Expanded(child: Divider()),
+          ],
+        ),
         Gap(10),
         ImagemComZoom(
           urlImagem: 'assets/images/segredos_do_mar/ondas_bioluminescentes.jpg',
