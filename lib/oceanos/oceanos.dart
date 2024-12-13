@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sea_adventure/oceanos/oc_body/oc_header/appbar_oc.dart';
 import 'package:sea_adventure/oceanos/oc_body/oc_infos/oceano_artico.dart';
 import 'package:sea_adventure/oceanos/oc_body/oc_infos/oceano_indico_oc.dart';
 import 'package:sea_adventure/oceanos/oc_body/oc_infos/oceano_pacifico_oc.dart';
+import 'package:sea_adventure/widgets/widgets.dart';
 
 class Oceanos extends StatefulWidget {
   const Oceanos({super.key});
@@ -24,7 +24,7 @@ class _OceanosState extends State<Oceanos> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: const AppBarOceano(),
+      appBar: const AppBarPadrao(titulo: 'Oceanos'),
       body: Padding(
         padding: const EdgeInsets.symmetric(
           horizontal: 15,

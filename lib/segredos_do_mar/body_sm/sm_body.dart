@@ -7,11 +7,11 @@ import 'package:sea_adventure/segredos_do_mar/body_sm/curiosidades_sm/sm_triangu
 import 'package:sea_adventure/segredos_do_mar/body_sm/curiosidades_sm/sm_vida_marinha.dart';
 import 'package:sea_adventure/widgets/widgets.dart';
 
-class SegredosMar extends StatelessWidget {
+class SegredosMarBody extends StatelessWidget {
   final ScrollController scrollController;
   final List<GlobalKey> listaKeySecao;
 
-  const SegredosMar({
+  const SegredosMarBody({
     super.key,
     required this.scrollController,
     required this.listaKeySecao,

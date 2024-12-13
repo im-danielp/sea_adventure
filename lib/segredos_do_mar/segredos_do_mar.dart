@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sea_adventure/segredos_do_mar/body_sm/header_sm/sm_appbar.dart';
 import 'package:sea_adventure/segredos_do_mar/body_sm/header_sm/sm_drawer.dart';
 import 'package:sea_adventure/segredos_do_mar/body_sm/sm_body.dart';
+import 'package:sea_adventure/widgets/widgets.dart';
 
 class SegredosDoMar extends StatelessWidget {
   const SegredosDoMar({super.key});
@@ -22,12 +22,14 @@ class SegredosDoMar extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: const AppBarSegredosMar(),
+      appBar: const AppBarPadrao(
+        titulo: 'Segredos do mar',
+      ),
       endDrawer: DrawerSegredosMar(
         scrollController: scrollController,
         listaKeySecao: listaKeySecao,
       ),
-      body: SegredosMar(
+      body: SegredosMarBody(
         scrollController: scrollController,
         listaKeySecao: listaKeySecao,
       ),

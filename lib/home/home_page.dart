@@ -9,6 +9,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Lista com as opções presentes na página de home.
     List<OpcoesHome> opcoesHome = OpcoesHome.opcoesHome;
 
     return Scaffold(
@@ -24,7 +25,7 @@ class HomePage extends StatelessWidget {
               itemCount: opcoesHome.length,
               itemBuilder: (context, index) => GestureDetector(
                 child: Container(
-                  height: 110,
+                  height: constraints.maxHeight * 0.13,
                   decoration: const BoxDecoration(
                     gradient: LinearGradient(
                       begin: Alignment.centerLeft,

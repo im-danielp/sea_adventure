@@ -136,29 +136,6 @@ class ImagemComZoom extends StatelessWidget {
         ),
       ],
     );
-    /*GestureDetector(
-      child: Container(
-        height: height,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(urlImagem),
-            fit: BoxFit.cover,
-          ),
-          borderRadius: const BorderRadius.all(
-            Radius.circular(10),
-          ),
-        ),
-      ),
-      // Mostra a imagem com zoom.
-      onTap: () {
-        showDialog(
-          context: context,
-          builder: (context) => DialogImagemExpandida(
-            urlImagem: urlImagem,
-          ),
-        );
-      },
-    );*/
   }
 }
 
@@ -207,7 +184,6 @@ class SubTitulo extends StatelessWidget {
   }
 }
 
-/// ##############################################################################################
 /// Subtitulo H3. Requer somente um texto para formatação.
 class Subtitulo3 extends StatelessWidget {
   final String msg;
@@ -227,4 +203,36 @@ class Subtitulo3 extends StatelessWidget {
       ),
     );
   }
+}
+
+/// ##############################################################################################
+/// AppBar usada como padrão em algumas páginas.
+class AppBarPadrao extends StatelessWidget implements PreferredSizeWidget {
+  final String titulo;
+
+  const AppBarPadrao({
+    super.key,
+    required this.titulo,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return AppBar(
+      backgroundColor: Colors.white,
+      surfaceTintColor: Colors.white,
+      title: Text(
+        titulo,
+        style: const TextStyle(
+          fontSize: 18,
+        ),
+      ),
+      leading: IconButton(
+        onPressed: () => Navigator.pop(context),
+        icon: const Icon(Icons.arrow_back_ios_new_rounded),
+      ),
+    );
+  }
+
+  @override
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }
