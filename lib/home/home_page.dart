@@ -19,7 +19,7 @@ class HomePage extends StatelessWidget {
           return Center(
             child: ListView.separated(
               shrinkWrap: true,
-              padding: const EdgeInsets.symmetric(horizontal: 30),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               physics: const BouncingScrollPhysics(),
               separatorBuilder: (context, index) => const Gap(8),
               itemCount: opcoesHome.length,

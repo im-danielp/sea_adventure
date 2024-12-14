@@ -145,7 +145,10 @@ class ImagemComZoom extends StatelessWidget {
 class Titulo extends StatelessWidget {
   final String msg;
 
-  const Titulo({super.key, required this.msg});
+  const Titulo({
+    super.key,
+    required this.msg,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -166,7 +169,10 @@ class Titulo extends StatelessWidget {
 class SubTitulo extends StatelessWidget {
   final String msg;
 
-  const SubTitulo({super.key, required this.msg});
+  const SubTitulo({
+    super.key,
+    required this.msg,
+  });
 
   @override
   Widget build(BuildContext context) {
