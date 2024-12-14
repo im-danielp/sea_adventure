@@ -18,6 +18,7 @@ class WidgetItemLista extends StatelessWidget {
     return SizedBox(
       height: 130,
       child: ListTile(
+        splashColor: Colors.transparent,
         title: Stack(
           clipBehavior: Clip.none,
           children: [
