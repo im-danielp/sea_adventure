@@ -20,7 +20,7 @@ class BodyAnimais extends StatelessWidget {
             builder: (context, child) => ListaAnimais(
               notifierAnimais: notifierAnimais,
             ),
-          )
+          ),
         ],
       ),
     );

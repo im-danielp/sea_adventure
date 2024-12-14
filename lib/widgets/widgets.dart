@@ -94,12 +94,14 @@ class ImagemComZoom extends StatelessWidget {
   final String urlImagem;
   final String? legenda;
   final double height;
+  final BoxFit boxFit;
 
   const ImagemComZoom({
     super.key,
     required this.urlImagem,
     this.height = 180,
     this.legenda = '',
+    this.boxFit = BoxFit.cover,
   });
 
   @override
@@ -108,13 +110,13 @@ class ImagemComZoom extends StatelessWidget {
       children: [
         GestureDetector(
           child: Container(
-            height: 180,
+            height: height,
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(
                   urlImagem,
                 ),
-                fit: BoxFit.cover,
+                fit: boxFit,
               ),
               borderRadius: const BorderRadius.all(
                 Radius.circular(10),
@@ -129,6 +131,49 @@ class ImagemComZoom extends StatelessWidget {
               ),
             );
           },
+        ),
+        Visibility(
+          visible: legenda != '',
+          child: Text(legenda!),
+        ),
+      ],
+    );
+  }
+}
+
+/// ##############################################################################################
+/// Mostra a imagem com a formatação padrão, mas sem opção de zoom.
+class ImagemSemZoom extends StatelessWidget {
+  final String urlImagem;
+  final String? legenda;
+  final double height;
+  final BoxFit boxFit;
+
+  const ImagemSemZoom({
+    super.key,
+    required this.urlImagem,
+    this.height = 180,
+    this.legenda = '',
+    this.boxFit = BoxFit.contain,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+          height: height,
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage(
+                urlImagem,
+              ),
+              fit: boxFit,
+            ),
+            borderRadius: const BorderRadius.all(
+              Radius.circular(10),
+            ),
+          ),
         ),
         Visibility(
           visible: legenda != '',
@@ -215,26 +260,32 @@ class Subtitulo3 extends StatelessWidget {
 /// AppBar usada como padrão em algumas páginas.
 class AppBarPadrao extends StatelessWidget implements PreferredSizeWidget {
   final String titulo;
+  final Color backgroundColor;
+  final Color textColor;
 
   const AppBarPadrao({
     super.key,
     required this.titulo,
+    this.backgroundColor = Colors.white,
+    this.textColor = const Color.fromARGB(255, 37, 37, 37),
   });
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      backgroundColor: Colors.white,
-      surfaceTintColor: Colors.white,
+      backgroundColor: backgroundColor,
+      surfaceTintColor: backgroundColor,
       title: Text(
         titulo,
-        style: const TextStyle(
+        style: TextStyle(
           fontSize: 18,
+          color: textColor,
         ),
       ),
       leading: IconButton(
         onPressed: () => Navigator.pop(context),
         icon: const Icon(Icons.arrow_back_ios_new_rounded),
+        color: textColor,
       ),
     );
   }

@@ -13,6 +13,7 @@ dependencies:
   gap: ^3.0.1
   google_fonts: ^6.2.1
   flutter_launcher_icons: ^0.14.1
+  url_launcher: ^6.3.1
 
 dev_dependencies:
   flutter_test:
@@ -31,3 +32,4 @@ flutter:
     - assets/images/segredos_do_mar/
     - assets/images/oceanos/
     - assets/images/estou_na_praia/
+    - assets/images/aliados_do_mar/
