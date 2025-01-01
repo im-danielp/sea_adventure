@@ -1,5 +1,5 @@
 # Sea Adventure
-![sea_icon](https://github.com/user-attachments/assets/b2f2333d-abf0-4516-be28-61beb842a206)
+![sea_icon](https://github.com/user-attachments/assets/f9a4619a-e2ff-4101-9975-165b48efcd57)
 
 
 Aplicativo mobile com o objetivo principal de ensinar os usuários a respeito do oceano, abordando temas de concientização e aprendizagem sobre a fauna, flora, ambientes e curiosidades.
