@@ -1,16 +1,11 @@
 # sea_adventure
 
-A new Flutter project.
+Aplicativo mobile com o objetivo principal de ensinar os usuários a respeito do oceano, abordando temas de concientização e aprendizagem sobre a fauna, flora, ambientes e curiosidades.
 
-## Getting Started
+Desenvolvido para a equipe de robótica Alphatech da escola SESI Aparecida de Goiânia como projeto complementar no torneio estadual de robótica, com período de desenvolvimento de 1 mês e meio.
+Site da escola: https://sesigoias.com.br/aparecida-de-goiania
 
-This project is a starting point for a Flutter application.
+As informações contidas no aplicativo foram fruto de pesquisas feitas por parte da equipe, juntamente com profissionais da área para garantir a vericidade dos dados.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Desenvolvido por Daniel Pacheco Ferreira.
+LinkedIn: www.linkedin.com/in/daniel-pacheco-ferreira
