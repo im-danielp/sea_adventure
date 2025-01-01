@@ -19,6 +19,6 @@
 </p>
 
 <p>
-    Desenvolvido por Daniel Pacheco Ferreira. <br>
+    Desenvolvido por <b>Daniel Pacheco Ferreira</b>. <br>
     LinkedIn: www.linkedin.com/in/daniel-pacheco-ferreira
 </p>
