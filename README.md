@@ -5,12 +5,20 @@
     <br>
 </div>
 
-Aplicativo mobile com o objetivo principal de ensinar os usuários a respeito do oceano, abordando temas de concientização e aprendizagem sobre a fauna, flora, ambientes e curiosidades.
+<p>
+    Aplicativo mobile com o objetivo principal de ensinar os usuários a respeito do oceano, abordando temas de concientização e aprendizagem sobre a fauna, flora, ambientes e curiosidades.
+</p>
 
-Desenvolvido para a equipe de robótica Alphatech da escola SESI Aparecida de Goiânia como projeto complementar no torneio estadual de robótica, com período de desenvolvimento de 1 mês e meio.
-Site da escola: https://sesigoias.com.br/aparecida-de-goiania
+<p>
+    Desenvolvido para a equipe de robótica Alphatech da escola SESI Aparecida de Goiânia como projeto complementar no torneio estadual de robótica, com período de desenvolvimento de 1 mês e meio. <br>
+    Site da escola: https://sesigoias.com.br/aparecida-de-goiania
+</p>
 
-As informações contidas no aplicativo foram fruto de pesquisas feitas por parte da equipe, juntamente com profissionais da área para garantir a vericidade dos dados.
+<p>
+    As informações contidas no aplicativo foram fruto de pesquisas feitas por parte da equipe, juntamente com profissionais da área para garantir a vericidade dos dados.
+</p>
 
-Desenvolvido por Daniel Pacheco Ferreira.
-LinkedIn: www.linkedin.com/in/daniel-pacheco-ferreira
+<p>
+    Desenvolvido por Daniel Pacheco Ferreira. <br>
+    LinkedIn: www.linkedin.com/in/daniel-pacheco-ferreira
+</p>
