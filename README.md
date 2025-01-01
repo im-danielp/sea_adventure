@@ -1,4 +1,5 @@
 # sea_adventure
+![icon](https://github.com/user-attachments/assets/74ca0104-1c32-4df9-ab64-33e3ec2e884f)
 
 Aplicativo mobile com o objetivo principal de ensinar os usuários a respeito do oceano, abordando temas de concientização e aprendizagem sobre a fauna, flora, ambientes e curiosidades.
 
@@ -9,3 +10,4 @@ As informações contidas no aplicativo foram fruto de pesquisas feitas por part
 
 Desenvolvido por Daniel Pacheco Ferreira.
 LinkedIn: www.linkedin.com/in/daniel-pacheco-ferreira
+
